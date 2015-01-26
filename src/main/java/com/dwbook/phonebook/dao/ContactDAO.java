@@ -7,7 +7,7 @@ import org.skife.jdbi.v2.sqlobject.customizers.Mapper;
 
 public interface ContactDAO {
 
-    @Mapper(ContactMapper.class)    // cf @MapResultAsBean
+    @Mapper(ContactMapper.class)
     @SqlQuery("select * from contact where id = :id")
     Contact getContactById(@Bind("id") int id);
 
@@ -20,6 +20,4 @@ public interface ContactDAO {
 
     @SqlUpdate("delete from contact where id = :id")
     void deleteContact(@Bind("id") int id);
-
 }
-
