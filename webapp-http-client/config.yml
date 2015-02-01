@@ -1,0 +1,9 @@
+server:
+    applicationConnectors:
+        - type: http
+          # The port the application will listen on
+          port: 8090
+    adminConnectors:
+        - type: http
+          # The admin port
+          port: 8091
